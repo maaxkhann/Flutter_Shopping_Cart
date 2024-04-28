@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         return ScreenUtilInit(
           child: GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'ShoppingCart',
             theme: ThemeData(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
               useMaterial3: true,

@@ -1,8 +1,8 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_task/constants/colors.dart';
 import 'package:flutter_task/constants/fonts_styles.dart';
-import 'package:badges/badges.dart' as badges;
 import 'package:flutter_task/helper/db_helper.dart';
 import 'package:flutter_task/model/cart_model.dart';
 import 'package:flutter_task/view-model/cart_view_model.dart';
@@ -11,11 +11,10 @@ import 'package:flutter_task/view/item_detail_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:http/http.dart' as http;
 import 'package:shimmer/shimmer.dart';
 
 class HomeView extends StatefulWidget {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   State<HomeView> createState() => _HomeViewState();
@@ -23,16 +22,6 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   DBHelper dbHelper = DBHelper();
-
-  List<String> productName = ['Mango', 'Orange', 'Banana', 'Apple'];
-  List<String> productUnit = ['kg', 'dozen', 'dozen', 'kg'];
-  List<int> productPrice = [120, 100, 80, 150];
-  List<String> productImage = [
-    'https://images.unsplash.com/photo-1628695323145-5be0b8fde365?q=80&w=1526&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1580052614034-c55d20bfee3b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1589217157232-464b505b197f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-  ];
 
   @override
   Widget build(BuildContext context) {
